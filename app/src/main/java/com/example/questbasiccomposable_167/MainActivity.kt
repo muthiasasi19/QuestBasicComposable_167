@@ -77,6 +77,11 @@ fun BasicColumn(modifier: Modifier = Modifier){
                 Text(text = "20220140167",
                     fontSize = 35.sp,
                     fontStyle = FontStyle.Normal)
+
+                Image(painter = painterResource(id = R.drawable.mypicture),
+                    contentDescription = "",)
+
+
             }
             }
 @Composable
