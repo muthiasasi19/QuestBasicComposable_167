@@ -19,12 +19,16 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             QuestBasicComposable_167Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) {}
+                Scaffold(modifier = Modifier.fillMaxSize()) {
+                }
             }
         }
     }
 }
+@Composable
+fun BasicColumn(modifier: Modifier = Modifier){
 
+}
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
