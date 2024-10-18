@@ -50,57 +50,60 @@ fun BasicColumn(modifier: Modifier = Modifier){
     Column(horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top,
         modifier = Modifier
-            .fillMaxSize() // urutan dalam modifier sangat berpengaruh, // untuk membuat full screen pada layar
-            .padding(top = 0.dp) {
-                Text("Login",
-                    fontSize = 60.sp,
-                    fontWeight = FontWeight.Bold)
-                Spacer(modifier =  Modifier.padding(5.dp))
-                Text(text = "Ini adalah halaman login",
-                    fontSize = 15.sp,
-                    fontStyle = FontStyle.Normal)
+            .fillMaxSize()  // urutan dalam modifier sangat berpengaruh, // untuk membuat full screen pada layar
+            .padding(top = 0.dp))  {
+        Text("Login",
+            fontSize = 60.sp,
+            fontWeight = FontWeight.Bold)
+        Spacer(modifier =  Modifier.padding(5.dp))
+        Text(text = "Ini adalah halaman login",
+            fontSize = 15.sp,
+            fontStyle = FontStyle.Normal)
 
-                Spacer(modifier = Modifier.padding(5.dp))
-                Image(
-                    painter = painterResource(id = R.drawable.umy),
-                    contentDescription = "", // harus ada
-                    modifier = Modifier
-                        .size(200.dp)
-                        .clip(CircleShape))
+        Spacer(modifier = Modifier.padding(10.dp))
+        Image(
+            painter = painterResource(id = R.drawable.umy),
+            contentDescription = "", // harus ada
+            modifier = Modifier
+                .size(200.dp)
+                .clip(CircleShape))
 
-                Text(text = "Nama",
-                    fontSize = 15.sp,
-                    fontStyle = FontStyle.Normal)
 
-                Text(text = "Muthia Sasi Marsakina",
-                    fontSize = 15.sp,
-                    fontStyle = FontStyle.Normal,
-                    color = Color.Red)
+        Text(text = "Nama",
+            fontSize = 15.sp,
+            fontStyle = FontStyle.Normal)
 
-                Text(text = "20220140167",
-                    fontSize = 35.sp,
-                    fontStyle = FontStyle.Normal)
+        Text(text = "Muthia Sasi Marsakina",
+            fontSize = 15.sp,
+            fontStyle = FontStyle.Normal,
+            color = Color.Red)
 
-                Image(painter = painterResource(id = R.drawable.mypicture),
-                    contentDescription = "",
-                    modifier = Modifier
-                        .padding(16.dp)
-                        .size(250.dp, 420.dp) // Mengatur ukuran agar membentuk lonjong
-                        .clip(RoundedCornerShape(150.dp)) // Mengatur sudut
-                        .graphicsLayer(
-                            alpha = 1.0f,
-                            translationX = -10f,
-                            scaleX = 1.02f,
-                            scaleY = 1.02f
-                        )
-                        .fillMaxSize(),
-                    contentScale = ContentScale.Crop
+
+        Text(text = "20220140167",
+            fontSize = 35.sp,
+            fontStyle = FontStyle.Normal)
+
+
+        Image(
+            painter = painterResource(id = R.drawable.mypicture),
+            contentDescription = "",
+            modifier = Modifier
+                .padding(16.dp)
+                .size(250.dp, 420.dp) // Mengatur ukuran untuk agar membentuk lonjong
+                .clip(RoundedCornerShape(150.dp)) // Mengatur sudut agar membulat
+                .graphicsLayer(
+                    alpha = 1.0f,
+                    translationX = -10f,
+                    scaleX = 1.02f,
+                    scaleY = 1.02f
                 )
+                .fillMaxSize(),
+            contentScale = ContentScale.Crop
+        )
 
+    }
 
-
-            }
-            }
+}
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
