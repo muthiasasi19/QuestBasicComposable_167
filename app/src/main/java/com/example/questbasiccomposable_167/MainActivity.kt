@@ -51,6 +51,7 @@ fun BasicColumn(modifier: Modifier = Modifier){
                     fontSize = 15.sp,
                     fontStyle = FontStyle.Normal)
 
+                Spacer(modifier = Modifier.padding(5.dp))
             }
             }
 @Composable
