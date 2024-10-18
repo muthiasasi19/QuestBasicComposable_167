@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.questbasiccomposable_167.ui.theme.QuestBasicComposable_167Theme
 
 class MainActivity : ComponentActivity() {
@@ -35,6 +36,10 @@ class MainActivity : ComponentActivity() {
 fun BasicColumn(modifier: Modifier = Modifier){
     Column(horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top,
+        modifier = Modifier
+            .fillMaxSize() // urutan dalam modifier sangat berpengaruh, // untuk membuat full screen pada layar
+            .padding(top = 0.dp)
+
 }
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
