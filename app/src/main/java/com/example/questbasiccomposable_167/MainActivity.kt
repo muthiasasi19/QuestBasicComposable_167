@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.questbasiccomposable_167.ui.theme.QuestBasicComposable_167Theme
@@ -31,6 +32,7 @@ class MainActivity : ComponentActivity() {
 }
 @Composable
 fun BasicColumn(modifier: Modifier = Modifier){
+    Column(horizontalAlignment = Alignment.CenterHorizontally,
 
 }
 @Composable
