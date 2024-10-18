@@ -13,8 +13,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.questbasiccomposable_167.ui.theme.QuestBasicComposable_167Theme
 
 class MainActivity : ComponentActivity() {
@@ -38,9 +40,15 @@ fun BasicColumn(modifier: Modifier = Modifier){
         verticalArrangement = Arrangement.Top,
         modifier = Modifier
             .fillMaxSize() // urutan dalam modifier sangat berpengaruh, // untuk membuat full screen pada layar
-            .padding(top = 0.dp)
+            .padding(top = 0.dp) {
+                Text("Login",
+                    fontSize = 60.sp,
+                    fontWeight = FontWeight.Bold) }
 
-}
+
+
+
+            }
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
