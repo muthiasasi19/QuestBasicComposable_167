@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -19,6 +20,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -79,7 +82,21 @@ fun BasicColumn(modifier: Modifier = Modifier){
                     fontStyle = FontStyle.Normal)
 
                 Image(painter = painterResource(id = R.drawable.mypicture),
-                    contentDescription = "",)
+                    contentDescription = "",
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .size(250.dp, 420.dp) // Mengatur ukuran agar membentuk lonjong
+                        .clip(RoundedCornerShape(150.dp)) // Mengatur sudut
+                        .graphicsLayer(
+                            alpha = 1.0f,
+                            translationX = -10f,
+                            scaleX = 1.02f,
+                            scaleY = 1.02f
+                        )
+                        .fillMaxSize(),
+                    contentScale = ContentScale.Crop
+                )
+
 
 
             }
