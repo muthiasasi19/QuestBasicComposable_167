@@ -73,6 +73,10 @@ fun BasicColumn(modifier: Modifier = Modifier){
                     fontSize = 15.sp,
                     fontStyle = FontStyle.Normal,
                     color = Color.Red)
+
+                Text(text = "20220140167",
+                    fontSize = 35.sp,
+                    fontStyle = FontStyle.Normal)
             }
             }
 @Composable
